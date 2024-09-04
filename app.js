@@ -15,14 +15,9 @@ function exibirMensagemInicial() {
 
 exibirMensagemInicial();
 
-function verificarChute() {
+function verificarChute(event){
+    event.preventDefault();
     let chute = document.querySelector('input').value;
-
-    if( chute > numeroLimite && chute > 10){
-        exibirTextoNaTela('h1', 'Número inválido, tente novamente!');
-        exibirTextoNaTela('p', ' ');
-        limparCampo();
-    }
     
     if (chute == numeroSecreto && chute <= 10) {
         exibirTextoNaTela('h1', 'Acertou!');
